@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+
+<div id="example">
+    <div id="grid"></div>
+    <script>
+        $(document).ready(function () {
+            $("#grid").kendoGrid({
+                dataSource: {
+                    type: "odata",
+                    transport: {
+                        read: "https://demos.telerik.com/kendo-ui/service/Northwind.svc/Customers"
+                    },
+                    pageSize: 20
+                }
+            })
+        });
+    </script>
+</div>
